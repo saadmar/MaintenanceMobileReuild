@@ -1,0 +1,8 @@
+{
+  "name": "maintenance",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

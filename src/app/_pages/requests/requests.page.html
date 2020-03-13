@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="!searching" style="font-weight: 600;">Requests</ion-title>
+    <ion-buttons slot="end" *ngIf="!searching">
+      <ion-button (click)="startSearching()">
+        <ion-icon
+          slot="icon-only"
+          ios="search-sharp"
+          md="search-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- for searching in the list of buildings -->
+    <ion-searchbar
+      [style.display]="searching?'':'none'"
+      (ionBlur)="onBlur()"
+      class="search"
+      [(ngModel)]="searchText"
+      #search
+    ></ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="all" (ionChange)="statusSelected($event)">
+      <ion-segment-button
+        *ngFor="let status of types"
+        [value]="status"
+        class="bold"
+        >{{status}}</ion-segment-button
+      >
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab
+    style="position: fixed;"
+    vertical="bottom"
+    horizontal="end"
+    [routerLink]="['/intake']"
+  >
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <requests-list [requestsList]="requests|status:requestStatus"></requests-list>
+</ion-content>

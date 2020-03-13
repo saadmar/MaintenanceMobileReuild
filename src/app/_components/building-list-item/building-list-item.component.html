@@ -1,0 +1,19 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img [src]="building.image" />
+  </ion-avatar>
+  <ion-label style="padding-top: 1rem;padding-bottom: 1rem;">
+    <h2>{{ building.name }}</h2>
+    <div
+      style="display: flex;flex-direction: row;margin-top: 1rem;align-items: center;"
+    >
+      <ion-icon name="location"></ion-icon>
+      <h3 style="margin-left: 1rem;">{{ building.address }}</h3>
+    </div>
+  </ion-label>
+  <ion-buttons slot="end" *ngIf="building.fav">
+    <ion-button>
+      <ion-icon name="star"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>

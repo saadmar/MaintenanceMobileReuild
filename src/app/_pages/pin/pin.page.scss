@@ -1,0 +1,16 @@
+.welcome {
+  text-align: center;
+  color: var(--ion-color-primary);
+  zoom: 1.5;
+}
+
+.pin {
+  padding: 0 !important;
+  height: 3rem;
+  width: 4rem;
+  border: 1px solid var(--ion-color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

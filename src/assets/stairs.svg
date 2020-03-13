@@ -1,0 +1,11 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<defs>
+
+
+
+ <path fill="#000000" id="i-442" d="M47,1v2H33v15H18v15H3v14H1V31h15V16h15V1H47z"/> 
+</defs>
+
+<use x="0" y="0" xlink:href="#i-442"/>
+
+</svg>

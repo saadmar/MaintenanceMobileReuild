@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="!searching" style="font-weight: 600;"
+      >Buildings</ion-title
+    >
+    <ion-buttons slot="end" *ngIf="!searching">
+      <ion-button (click)="startSearching()">
+        <ion-icon
+          slot="icon-only"
+          ios="search-sharp"
+          md="search-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- for searching in the list of buildings -->
+    <ion-searchbar
+      [style.display]="searching?'':'none'"
+      (ionBlur)="onBlur()"
+      class="search"
+      [(ngModel)]="searchText"
+      #search
+    ></ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="favorites" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="favorites" class="bold"
+        >Favorites</ion-segment-button
+      >
+      <ion-segment-button value="all" class="bold"
+        >All buildings</ion-segment-button
+      >
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <building-list
+    [buildingList]="buildings|fav:apply| filter:searchText"
+  ></building-list>
+</ion-content>

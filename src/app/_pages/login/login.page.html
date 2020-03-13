@@ -1,0 +1,64 @@
+<ion-content>
+  <div
+    style="height: 100vh;width: 100vw; display: flex;flex-direction: column;justify-content: space-around;align-items:stretch;padding-top: 2rem;padding-bottom: 6rem; "
+  >
+    <div>
+      <h1 class="welcome">
+        Welcome
+      </h1>
+      <h4 style="text-align: center;">
+        Please fill in your credentials to start !
+      </h4>
+    </div>
+
+    <img
+      src="../../../assets/ced_logo.png"
+      style="width: 250px; margin-left: auto;
+                  margin-right: auto; display: block;"
+    />
+
+    <div class="ion-padding">
+      <ion-item>
+        <ion-label position="floating" style="color: rgb(153, 151, 151);"
+          >Username</ion-label
+        >
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" style="color: rgb(153, 151, 151);"
+          >Password</ion-label
+        >
+        <div
+          style="display: flex;flex-direction: row;justify-content: space-between;width: 100%;"
+        >
+          <ion-input [type]="passwordType" clearOnEdit="false"></ion-input>
+          <ion-icon
+            item-end
+            [name]="passwordIcon"
+            class="passwordIcon"
+            (click)="hideShowPassword()"
+          ></ion-icon>
+        </div>
+      </ion-item>
+    </div>
+
+    <div
+      style=" display: flex;
+    align-items: flex-start;"
+    >
+      <div style="margin-left: auto;margin-right: auto;">
+        <ion-checkbox checked></ion-checkbox>&nbsp;Remember me
+      </div>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button size="medium" style="text-transform: none;" expand="block"
+        >Login</ion-button
+      >
+    </div>
+    <div style="text-align: center;">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+</ion-content>
