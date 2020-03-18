@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Building } from "src/app/_models";
 import { IonSearchbar } from "@ionic/angular";
+import { data } from "../../_models";
 
 @Component({
   selector: "app-buildings",
@@ -22,15 +23,7 @@ export class BuildingsPage implements OnInit {
   @ViewChild("search", { static: false }) searchInput: IonSearchbar;
 
   ngOnInit() {
-    for (let i = 0; i < 16; i++) {
-      this.buildings.push({
-        name: "HQ's Quares " + i,
-        address: "some adress...",
-        image:
-          "https://www.freepnglogos.com/uploads/building-png/download-building-png-image-pngimg-6.png",
-        fav: i % 2 == 0 ? true : false
-      });
-    }
+    this.buildings = data;
   }
 
   onBlur() {
