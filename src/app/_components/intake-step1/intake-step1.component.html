@@ -1,11 +1,38 @@
 <div style="width: 100%;">
   <ion-item>
     <ion-label>Select Buildings group</ion-label>
-    <ion-select value="b1" okText="Okay" cancelText="Cancel">
+    <ion-select value="bg2" interface="popover">
+      <ion-select-option value="bg1">Buiding group 1</ion-select-option>
+      <ion-select-option value="bg2">Buiding group 2</ion-select-option>
+      <ion-select-option value="bg3">Buiding group 3</ion-select-option>
+      <ion-select-option value="bg4">Buiding group 4</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Select Buildings</ion-label>
+    <ion-select value="b1" interface="popover">
       <ion-select-option value="b1">building1</ion-select-option>
       <ion-select-option value="b2">building2</ion-select-option>
       <ion-select-option value="b3">building3</ion-select-option>
       <ion-select-option value="b4">building4</ion-select-option>
     </ion-select>
+  </ion-item>
+  <ion-item-group>
+    <ion-item style="width: 10rem;">
+      <ion-label position="floating">House Number</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item style="width: 15rem;">
+      <ion-label position="floating">House number addition</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item style="width: 10rem;">
+      <ion-label position="floating">Floor (Optional)</ion-label>
+      <ion-input type="number" value="0"></ion-input>
+    </ion-item>
+  </ion-item-group>
+  <ion-item>
+    <ion-label position="floating">Remarks (Optional)</ion-label>
+    <ion-input type="text"></ion-input>
   </ion-item>
 </div>
